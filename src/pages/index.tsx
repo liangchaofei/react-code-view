@@ -17,7 +17,41 @@ const INIT_CODE = `
       <p>Card content</p>
       <p>Card content</p>
   </Card>
+  <Table
+    dataSource={[
+      {
+        key: '1',
+        name: '胡彦斌',
+        age: 32,
+        address: '西湖区湖底公园1号',
+      },
+      {
+        key: '2',
+        name: '胡彦祖',
+        age: 42,
+        address: '西湖区湖底公园1号',
+      },
+    ]}
+    columns={ [
+      {
+        title: '姓名',
+        dataIndex: 'name',
+        key: 'name',
+      },
+      {
+        title: '年龄',
+        dataIndex: 'age',
+        key: 'age',
+      },
+      {
+        title: '住址',
+        dataIndex: 'address',
+        key: 'address',
+      },
+    ]}
+  />
 </div>
+
 `;
 
 function App() {
@@ -61,7 +95,6 @@ function App() {
               boxSizing: "border-box",
               height: "100%",
               maxWidth: 500,
-              maxHeight: 300,
               overflow: "auto",
               padding: 10,
             }}
